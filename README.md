@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 CloudHRLabs
 
-## Getting Started
+> Learn Workday like you're working in a real company.
 
-First, run the development server:
+CloudHRLabs is a real-world learning platform for Workday Consultants, HR Professionals, and Students.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Unlike traditional tutorials, CloudHRLabs focuses on **production experience**, **real implementation scenarios**, **debugging techniques**, **industry best practices**, and **lessons learned from 7+ years of consulting experience**.
+
+---
+
+# 🌟 Mission
+
+Stop collecting information.
+
+Start building real experience.
+
+CloudHRLabs is designed to help learners become project-ready through structured, practical learning instead of jumping between YouTube, documentation, community forums, and random blogs.
+
+---
+
+# 🎯 What You'll Learn
+
+- Workday Fundamentals
+- Business Processes
+- Security
+- Reports
+- Calculated Fields
+- EIB
+- Studio
+- PECI
+- Core Connectors
+- REST APIs
+- SOAP APIs
+- Debugging
+- Performance Optimization
+- Client Communication
+- Interview Preparation
+- Freelancing
+- Career Growth
+
+---
+
+# 🛠 Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Git
+- GitHub
+- Vercel (Coming Soon)
+
+---
+
+# 📂 Project Structure
+
+```
+app/
+components/
+sections/
+data/
+lib/
+types/
+public/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 🚀 Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Phase 1
+- ✅ Homepage
+- 🚧 Learning Paths
+- 🚧 Resources
+- 🚧 Blog
+- 🚧 About
+- 🚧 Contact
 
-## Learn More
+## Phase 2
+- User Authentication
+- Student Dashboard
+- Course Player
 
-To learn more about Next.js, take a look at the following resources:
+## Phase 3
+- Premium Courses
+- Payments
+- Downloads
+- Progress Tracking
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Phase 4
+- Community
+- Certificates
+- Mock Interviews
+- AI Learning Assistant
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# 🎯 Vision
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Become the world's most practical learning platform for Workday professionals.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# 👨‍💻 Author
+
+**CloudHRLabs**
+
+Built with ❤️ from real industry experience.

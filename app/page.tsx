@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import WhyCloudHRLabs from "../components/WhyCloudHRLabs";
-import CareerJourney from "../components/CareerJourney";
+import Hero from "../sections/Hero";
+import WhyCloudHRLabs from "../sections/WhyCloudHRLabs";
+import CareerJourney from "../sections/CareerJourney";
 import WhyDifferent from "../components/WhyDifferent";
 
 export default function Home() {
