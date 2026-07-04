@@ -323,3 +323,35 @@ All notable changes to the CloudHRLabs project are documented here.
 **Last Updated:** July 2026
 
 **Current Version:** v0.2.0
+
+---
+
+# Sprint 11 - Authentication & Student Dashboard
+
+## ✅ Completed
+
+- Integrated Clerk Authentication
+- Configured Clerk Provider
+- Added Clerk Middleware
+- Created Sign In page
+- Created Sign Up page
+- Created protected Dashboard page
+- Added authentication route protection
+- Built reusable Dashboard components
+- Created Dashboard Hero
+- Created Continue Learning section
+- Created Statistics Grid
+- Created Recent Activity section
+- Refactored Dashboard using reusable components
+
+## 📚 Learned
+
+- Authentication with Clerk
+- Environment variables
+- Protected routes
+- Next.js middleware
+- Server-side authentication
+- Feature-based component architecture
+- Building secure applications
+
+---
