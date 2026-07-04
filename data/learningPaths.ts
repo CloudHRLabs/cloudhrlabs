@@ -1,6 +1,7 @@
 export const learningPaths = [
   {
     id: 1,
+    slug: "beginner",
     stage: "🌱 Foundation",
     title: "Beginner",
     description:
@@ -15,9 +16,36 @@ export const learningPaths = [
       "Security",
       "Organizations",
     ],
+    curriculum: [
+      {
+        module: "Getting Started",
+        lessons: [
+          "Introduction to Workday",
+          "Workday Navigation",
+          "Tenant Overview",
+        ],
+      },
+      {
+        module: "Core Concepts",
+        lessons: [
+          "Organizations",
+          "Business Processes",
+          "Security Basics",
+        ],
+      },
+      {
+        module: "Hands-on Practice",
+        lessons: [
+          "Create Your First Business Process",
+          "Mini Assignment",
+        ],
+      },
+    ],
   },
+
   {
     id: 2,
+    slug: "junior-consultant",
     stage: "⚙️ Core Skills",
     title: "Junior Consultant",
     description:
@@ -32,9 +60,12 @@ export const learningPaths = [
       "EIB",
       "Integrations",
     ],
+    curriculum: [],
   },
+
   {
     id: 3,
+    slug: "project-consultant",
     stage: "🚀 Implementation",
     title: "Project Consultant",
     description:
@@ -49,9 +80,12 @@ export const learningPaths = [
       "REST APIs",
       "SOAP APIs",
     ],
+    curriculum: [],
   },
+
   {
     id: 4,
+    slug: "senior-consultant",
     stage: "🔥 Production",
     title: "Senior Consultant",
     description:
@@ -66,9 +100,12 @@ export const learningPaths = [
       "Optimization",
       "Client Communication",
     ],
+    curriculum: [],
   },
+
   {
     id: 5,
+    slug: "career-growth",
     stage: "👑 Mastery",
     title: "Career Growth",
     description:
@@ -83,5 +120,6 @@ export const learningPaths = [
       "Leadership",
       "Personal Branding",
     ],
+    curriculum: [],
   },
 ];
