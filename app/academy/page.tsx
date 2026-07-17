@@ -1,8 +1,24 @@
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
-import { academyCategories } from "@/data/academyCategories";
+import { prisma } from "@/lib/prisma";
 
-export default function AcademyPage() {
+export default async function AcademyPage() {
+  const courses = await prisma.course.findMany({
+    where: {
+      published: true,
+    },
+    include: {
+      modules: {
+        include: {
+          lessons: true,
+        },
+      },
+    },
+    orderBy: {
+      createdAt: "asc",
+    },
+  });
+
   return (
     <main className="min-h-screen bg-slate-950 text-white">
 
@@ -87,47 +103,71 @@ export default function AcademyPage() {
 
       </section>
 
-      {/* Categories */}
+      {/* Courses */}
 
       <section className="mx-auto max-w-7xl px-6 pb-32">
 
         <h2 className="text-center text-5xl font-bold">
-          Browse by Category
+          Available Courses
         </h2>
 
         <p className="mt-5 text-center text-xl text-slate-400">
-          Choose a category and master every Workday skill step by step.
+          Learn directly from real production experience.
         </p>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-          {academyCategories.map((category) => (
+          {courses.map((course) => {
 
-            <Card key={category.id}>
+            const lessonCount = course.modules.reduce(
+              (total, module) => total + module.lessons.length,
+              0
+            );
 
-              <h3 className="text-3xl font-bold">
-                {category.title}
-              </h3>
+            return (
 
-              <p className="mt-6 leading-8 text-slate-400">
-                {category.description}
-              </p>
+              <Card key={course.id}>
 
-              <div className="mt-8 flex items-center justify-between">
+                <h3 className="text-3xl font-bold">
+                  {course.title}
+                </h3>
 
-                <span className="rounded-full bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400">
-                  {category.courseCount} Courses
-                </span>
+                <p className="mt-6 leading-8 text-slate-400">
+                  {course.description}
+                </p>
 
-                <Button href={`/academy/${category.slug}`} variant="secondary">
-                  Explore →
-                </Button>
+                <div className="mt-8 space-y-2">
 
-              </div>
+                  <p className="text-slate-300">
+                    📚 {lessonCount} Lessons
+                  </p>
 
-            </Card>
+                  <p className="text-slate-300">
+                    ⏱ {course.duration} mins
+                  </p>
 
-          ))}
+                  <p className="text-slate-300">
+                    🎯 {course.difficulty}
+                  </p>
+
+                </div>
+
+                <div className="mt-8">
+
+                  <Button
+                    href={`/academy/${course.slug}`}
+                    variant="secondary"
+                  >
+                    Explore →
+                  </Button>
+
+                </div>
+
+              </Card>
+
+            );
+
+          })}
 
         </div>
 

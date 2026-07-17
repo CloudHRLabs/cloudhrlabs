@@ -1,16 +1,44 @@
 import Button from "@/components/ui/Button";
 
-export default function LessonNavigation() {
+type LessonLink = {
+  title: string;
+  slug: string;
+};
+
+type LessonNavigationProps = {
+  previousLesson?: LessonLink;
+  nextLesson?: LessonLink;
+};
+
+export default function LessonNavigation({
+  previousLesson,
+  nextLesson,
+}: LessonNavigationProps) {
   return (
     <div className="flex flex-wrap justify-between gap-4">
 
-      <Button variant="secondary">
-        ← Previous Lesson
-      </Button>
+      {previousLesson ? (
+        <Button
+          href={`/lesson/${previousLesson.slug}`}
+          variant="secondary"
+        >
+          ← {previousLesson.title}
+        </Button>
+      ) : (
+        <Button variant="secondary">
+          ← First Lesson
+        </Button>
+      )}
 
-      <Button>
-        Next Lesson →
-      </Button>
+      {nextLesson ? (
+        <Button href={`/lesson/${nextLesson.slug}`}>
+          {nextLesson.title} →
+        </Button>
+      ) : (
+        <Button>
+          Course Complete 🎉
+        </Button>
+      )}
 
     </div>
   );

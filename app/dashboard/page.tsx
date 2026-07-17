@@ -1,6 +1,8 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
+import { syncUser } from "@/lib/actions/syncUser";
+
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
@@ -15,6 +17,9 @@ export default async function DashboardPage() {
   if (!userId) {
     redirect("/sign-in");
   }
+
+  // Sync Clerk user with the database
+  await syncUser();
 
   return (
     <main className="min-h-screen bg-slate-950 text-white">
